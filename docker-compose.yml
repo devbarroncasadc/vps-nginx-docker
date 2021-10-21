@@ -21,6 +21,9 @@ services:
   minha_app:
     image: barroncasadc/minha-app-dockerizada:latest
     build: . #onde esta localizado o Dockerfile
+    restart: always
+    environment:
+      - ACTUAL_ENV=${ENV}
     # ports:
     #   - 3090
     depends_on:
